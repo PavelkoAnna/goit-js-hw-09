@@ -8,11 +8,148 @@
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
-@import url('./animations.css');
 
 /* Sections style */
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: 24px;
+
+  width: 1128px;
+  margin: 24px auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.gallery-item {
+  width: 360px;
+  height: 200px;
+}
+
+.gallery-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-main {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+  padding-left: 24px;
+
+  color: #2e2f42;
+
+  transition: color 250ms ease;
+}
+.gallery-main:hover,
+.gallery-main:focus {
+  color: #4e75ff;
+}
+.form-main {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+  padding-left: 24px;
+
+  color: #2e2f42;
+
+  transition: color 250ms ease;
+}
+.form-main:hover,
+.form-main:focus {
+  color: #4e75ff;
+}
+
+.back-link-2 {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #4f5fff;
+  font-size: 14px;
+}
+.back-link-2:hover {
+  text-decoration: underline;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feedback-form {
+  width: 320px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #2e2f42;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  font-family: inherit;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border-color: #8a8a8a;
+}
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #4f5fff;
+  box-shadow: 0 0 0 3px rgba(79, 95, 255, 0.2);
+}
+
+.feedback-form textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.feedback-form button {
+  background: #4f5fff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+.feedback-form button:hover {
+  background: #3f4fe0;
+}
+
+.feedback-form button:active {
+  transform: scale(0.98);
+}
